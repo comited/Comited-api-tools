@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Api tools</title>
+    <title>Document</title>
+    <script>
+        // get the code from the url
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        if (!code) {
+            window.location.replace(`https://github.com/login/oauth/access_token?client_id=e9fa1bc78a354cc3965a&code=${code}`);
+        }
+        //window.location.replace(`/dashboard`);
+    </script>
 </head>
 <body>
-    Hello there!
-    <a href="https://github.com/login/oauth/authorize?client_id=e9fa1bc78a354cc3965a&allow_signup=false&scope=user">Login!</a>
-    <script>
-        // print all of the url parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        for (const [key, value] of urlParams) {
-            console.log(key, value);
-        }
-    </script>
 </body>
 </html>
